@@ -9,7 +9,7 @@ const MyPostedJob = () => {
         <div className='my-12'>
             <h1>My posted Job </h1>
             <Suspense fallback={'Loading...'}>
-                <MyPostedJobList JobPromisedByMyPostedJob={JobPromisedByMyPostedJob(user?.email)} />
+                <MyPostedJobList JobPromisedByMyPostedJob={JobPromisedByMyPostedJob(user?.email, user?.accessToken)} />
             </Suspense>
         </div>
     );

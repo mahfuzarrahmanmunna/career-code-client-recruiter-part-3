@@ -1,5 +1,10 @@
-export const JobPromisedByMyPostedJob = (email) => {
-    return fetch(`http://localhost:3000/jobs?email=${email}`)
+export const JobPromisedByMyPostedJob = (email, accessToken) => {
+    return fetch(`http://localhost:3000/jobs?email=${email}`, {
+        headers: {
+            authorization: `Bearer ${accessToken}`
+        },
+        credentials: 'include'
+    })
         .then(res => res.json())
         .catch(err => {
             console.log(err);

@@ -21,7 +21,7 @@ const MyPostedJobList = ({ JobPromisedByMyPostedJob }) => {
                     </thead>
                     <tbody>
                         {
-                            data && data.map((item, index) => <MyPostedRow key={index} item={item} index={index} />)
+                            data && data?.map((item, index) => <MyPostedRow key={index} item={item} index={index} />)
                         }
                     </tbody>
                 </table>

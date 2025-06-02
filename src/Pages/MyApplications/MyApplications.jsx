@@ -8,6 +8,7 @@ import { myApplicationsPromise } from '../../API/ApplicationsAPI/ApplicationsAPI
 
 const MyApplications = () => {
     const { user } = useAuth()
+    console.log('token in the context', user.accessToken)
     return (
         <div className='lg:px-24 px-6 py-12'>
             <ApplicationStates />
@@ -16,7 +17,7 @@ const MyApplications = () => {
                     <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-500"></div>
                 </div>}>
                 <ApplicationList
-                    myApplicationsPromise={myApplicationsPromise(user?.email)}
+                    myApplicationsPromise={myApplicationsPromise(user?.email, user?.accessToken)}
                 />
             </Suspense>
         </div>

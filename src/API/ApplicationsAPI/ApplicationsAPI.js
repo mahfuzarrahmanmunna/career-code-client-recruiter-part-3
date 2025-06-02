@@ -1,6 +1,8 @@
-export const myApplicationsPromise = email => {
+export const myApplicationsPromise = (email, accessToken) => {
     return fetch(`http://localhost:3000/application?email=${email}`, {
-        credentials: 'include'
+        headers: {
+            authorization: ` Bearer ${accessToken}`
+        }
     })
         .then(res => res.json())
         .catch(err => {
