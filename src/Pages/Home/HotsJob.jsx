@@ -3,7 +3,7 @@ import JobCard from "../Shared/Job/JobCard";
 
 const HotsJob = ({ jobsPromise }) => {
     const jobs = use(jobsPromise)
-    // console.log(jobs);
+    console.log(jobs);
     return (
         <div className="lg:px-24 px-6">
             <h1 className="text=3xl font-bold text-center my-8">

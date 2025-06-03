@@ -31,12 +31,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'jobs/:id',
-                loader: ({ params }) => fetch(`http://localhost:3000/jobs/${params.id}`),
+                loader: ({ params }) => fetch(`https://career-code-server-for-recruiter-pa-tau.vercel.app/jobs/${params.id}`),
                 Component: JobDetails
             },
             {
                 path: 'job-apply/:id',
-                loader: ({ params }) => fetch(`http://localhost:3000/jobs/${params.id}`),
+                loader: ({ params }) => fetch(`https://career-code-server-for-recruiter-pa-tau.vercel.app/jobs/${params.id}`),
                 element: <PrivateRoutes><JobApply /></PrivateRoutes>
             },
             {
@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoutes>
                     <ViewApplications />
                 </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:3000/applications/job/${params.id}`)
+                loader: ({ params }) => fetch(`https://career-code-server-for-recruiter-pa-tau.vercel.app/applications/job/${params.id}`)
             }
         ]
     }

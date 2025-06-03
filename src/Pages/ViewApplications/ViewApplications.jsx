@@ -12,7 +12,7 @@ const ViewApplications = () => {
     const handleStatusChange = (e, id) => {
         console.log(e.target.value, id);
 
-        axios.patch(`http://localhost:3000/applications/${id}`, { status: e.target.value })
+        axios.patch(`https://career-code-server-for-recruiter-pa-tau.vercel.app/applications/${id}`, { status: e.target.value })
             .then(res => {
                 if (res.data.matchedCount) {
                     Swal.fire({

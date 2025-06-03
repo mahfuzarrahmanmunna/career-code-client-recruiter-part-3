@@ -31,7 +31,7 @@ const AddJobs = () => {
         console.log(newJob);
 
         // Save the job to the database
-        axios.post('http://localhost:3000/jobs', newJob)
+        axios.post('https://career-code-server-for-recruiter-pa-tau.vercel.app/jobs', newJob)
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({

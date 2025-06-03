@@ -29,7 +29,7 @@ const JobApply = () => {
         console.log(applicationData);
 
         // Here you can send the applicationData to your server or API
-        axios.post('http://localhost:3000/applications', applicationData)
+        axios.post('https://career-code-server-for-recruiter-pa-tau.vercel.app/applications', applicationData)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

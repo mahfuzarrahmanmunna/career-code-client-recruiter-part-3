@@ -51,8 +51,8 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             setLoading(false);
-            if (currentUser.email) {
-                axios.post('http://localhost:3000/jwt', { email: currentUser.email }, { withCredentials: true })
+            if (currentUser?.email) {
+                axios.post('https://career-code-server-for-recruiter-pa-tau.vercel.app/jwt', { email: currentUser.email }, { withCredentials: true })
                     .then(res => {
                         console.log(res.data);
                     })
